@@ -12,23 +12,22 @@ class registrasi extends REST_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->database();
+        $this->load->model('AuthModel', 'Auth');
+
         header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+        header("Access-Control-Allow-Headers: API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         $method = $_SERVER['REQUEST_METHOD'];
         if ($method == "OPTIONS") {
             die();
         }
-        // Load the user model
-        $this->load->model('user');
     }
+    
     public function index_post()
     {
 
         // Get the post data
         $nama = strip_tags($this->post('nama'));
-
         $profesi = strip_tags($this->post('profesi'));
         $email = strip_tags($this->post('email'));
         $password = $this->post('password');
@@ -42,7 +41,7 @@ class registrasi extends REST_Controller
             $con['conditions'] = array(
                 'email' => $email,
             );
-            $userCount = $this->user->getRows($con);
+            $userCount = $this->auth->getRows($con);
 
             if ($userCount > 0) {
                 // Set the response and exit
@@ -51,13 +50,12 @@ class registrasi extends REST_Controller
                 // Insert user data
                 $userData = array(
                     'nama' => $nama,
-
                     'profesi' => $profesi,
                     'email' => $email,
                     'password' => md5($password),
 
                 );
-                $insert = $this->user->insert($userData);
+                $insert = $this->auth->insert($userData);
 
                 // Check if the user data is inserted
                 if ($insert) {

@@ -36,7 +36,18 @@ class User extends REST_Controller
         } else {
             $result_api = $this->user->getUser($id);
         }
-        $this->response($result_api, 200);
+
+        if ($result_api) {
+            $this->response([
+                'status' => TRUE,
+                'data' => $result_api
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'id not found'
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
     }
 
     function index_delete()
@@ -44,14 +55,30 @@ class User extends REST_Controller
         // ambil iduser yang dikirimkan
         $id = $this->delete('iduser');
 
-        // query di model
-        $result_api = $this->user->delete($id);
-
-        // cek apakah ada data yang terhapus
-        if ($result_api) {
-            $this->response(array('status' => 'success'), 201);
+        // cek apakah ada id yang dikirim
+        if (!$id) {
+            // jika tidak ada id yang dikirim
+            $this->response([
+                'status' => false,
+                'message' => 'provide an id'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         } else {
-            $this->response(array('status' => 'fail'), 502);
+            // query di model
+            $result_api = $this->user->delete($id);
+            
+            // cek apakah ada data yang terhapus
+            if ($result_api > 0) {
+                $this->response([
+                    'status' => TRUE,
+                    'message' => 'deleted success'
+                ], REST_Controller::HTTP_NO_CONTENT);
+            } else {
+                $this->response([
+                    'status' => false,
+                    'message' => 'id not found!'
+                ], REST_Controller::HTTP_NOT_FOUND);
+            }
+            
         }
     }
 }
