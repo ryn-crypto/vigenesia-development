@@ -34,13 +34,32 @@ class Get_motivasi extends REST_Controller
         if (!$iduser) {
             $api = $this->motivasi->getMotivasi();
         } else {
-            $api = $this->motivasi->getMotivasi($iduser);
+            if ($this->motivasi->getMotivasi($iduser)) {
+                $api = $this->motivasi->getMotivasi($iduser);
+            } else {
+                
+            }
+        }
+
+        if ($iduser) {
+            if (!$this->motivasi->getMotivasi($iduser)) {
+                // response
+                $this->response([
+                    'status' => false,
+                    'message' => 'id not found'
+                ], REST_Controller::HTTP_NOT_FOUND);
+
+            } else {
+                $api = $this->motivasi->getMotivasi($iduser);
+            }
+        } else {
+            $api = $this->motivasi->getMotivasi();
         }
 
         // response
-        $this->response([
-            'status' => TRUE,
-            'data' => $api
-        ], REST_Controller::HTTP_OK);
+        // $this->response([
+        //     'status' => TRUE,
+        //     'data' => $api
+        // ], REST_Controller::HTTP_OK);
     }
 }
