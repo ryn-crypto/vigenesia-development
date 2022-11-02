@@ -12,7 +12,7 @@ class registrasi extends REST_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('AuthModel', 'Auth');
+        $this->load->model('AuthModel', 'auth');
 
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
@@ -32,7 +32,6 @@ class registrasi extends REST_Controller
         $email = strip_tags($this->post('email'));
         $password = $this->post('password');
 
-
         // Validate the post data
         if (!empty($nama)  && !empty($profesi) && !empty($email) && !empty($password)) {
 
@@ -41,8 +40,9 @@ class registrasi extends REST_Controller
             $con['conditions'] = array(
                 'email' => $email,
             );
-            $userCount = $this->auth->getRows($con);
 
+            $userCount = $this->auth->getRows($con);
+            
             if ($userCount > 0) {
                 // Set the response and exit
                 $this->response("The given email already exists.", REST_Controller::HTTP_BAD_REQUEST);

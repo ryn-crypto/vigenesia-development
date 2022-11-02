@@ -1,25 +1,33 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class motivasi extends CI_Model
+class motivasiModel extends CI_Model
 {
 
     public function __construct()
     {
         parent::__construct();
 
-        // Load the database library
-        $this->load->database();
-
         $this->mTbl = 'motivasi';
         $this->muser='user';
-
-
     }
 
+
+    public function getMotivasi($param = null)
+    {
+        // cek parameter
+        if (!$param) {
+            $this->db->order_by('tanggal_input', 'DESC');
+            return $this->db->get('motivasi')->result();
+        } else {
+            $this->db->where('iduser', $param);
+            return $this->db->get('motivasi')->result();
+        }
+    }
     /*
      * Insert motivasi data
      */
+    
     public function insert($data)
     {
         //add created and modified date if not exists

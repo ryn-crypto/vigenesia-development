@@ -71,7 +71,7 @@ class User extends REST_Controller
                 $this->response([
                     'status' => TRUE,
                     'message' => 'deleted success'
-                ], REST_Controller::HTTP_NO_CONTENT);
+                ], REST_Controller::HTTP_OK);
             } else {
                 $this->response([
                     'status' => false,
