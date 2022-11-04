@@ -7,7 +7,7 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class Get_motivasi extends REST_Controller
+class Motivasi extends REST_Controller
 {
 
     function __construct($config = 'rest')
@@ -31,35 +31,41 @@ class Get_motivasi extends REST_Controller
         $tanggal_input = $this->get('tanggal_input');
 
         // test apakah ada id yang dikirim
-        if (!$iduser) {
-            $api = $this->motivasi->getMotivasi();
-        } else {
-            if ($this->motivasi->getMotivasi($iduser)) {
-                $api = $this->motivasi->getMotivasi($iduser);
-            } else {
+        // if (!$iduser) {
+        //     $api = $this->motivasi->getMotivasi();
+        // } else {
+        //     if ($this->motivasi->getMotivasi($iduser)) {
+        //         $api = $this->motivasi->getMotivasi($iduser);
+        //     } else {
                 
-            }
-        }
+        //     }
+        // }
 
+        // cek apakah ada id user
         if ($iduser) {
             if (!$this->motivasi->getMotivasi($iduser)) {
                 // response
                 $this->response([
                     'status' => false,
-                    'message' => 'id not found'
+                    'message' => 'motivasi with id not found'
                 ], REST_Controller::HTTP_NOT_FOUND);
-
             } else {
+                // query
                 $api = $this->motivasi->getMotivasi($iduser);
+                // response
+                $this->response([
+                    'status' => TRUE,
+                    'data' => $api
+                ], REST_Controller::HTTP_OK);
             }
         } else {
+            // query
             $api = $this->motivasi->getMotivasi();
+            // response
+            $this->response([
+                'status' => TRUE,
+                'data' => $api
+            ], REST_Controller::HTTP_OK);
         }
-
-        // response
-        // $this->response([
-        //     'status' => TRUE,
-        //     'data' => $api
-        // ], REST_Controller::HTTP_OK);
     }
 }
