@@ -34,17 +34,11 @@ class motivasiModel extends CI_Model
         return $insert ? $this->db->insert_id() : false;
     }
 
-    /*
-     * Update materi data
-     */
+    
+    // update data motivasi
     public function update($data, $id)
     {
-        //add modified date if not exists
-        if (!array_key_exists("tanggal_update", $data)) {
-            $data['tanggal_update'] = date("Y-m-d H:i:s");
-        }
-
-        //update materi data in materi table
+        //update data pada tabel
         $update = $this->db->update($this->mTbl, $data, array('id' => $id));
 
         //return the status

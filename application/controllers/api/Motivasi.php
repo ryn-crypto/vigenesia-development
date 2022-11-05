@@ -94,9 +94,49 @@ class Motivasi extends REST_Controller
             // response
             $this->response([
                 'status' => TRUE,
-                'message' => 'Motivasi added successfully.',
+                'message' => 'Motivasi added successfully',
             ], REST_Controller::HTTP_CREATED);
         }
-
     } 
+
+    public function index_put()
+    {
+        // ambil data 
+        $id = $this->put('id');
+        $isi_motivasi = strip_tags($this->put('isi_motivasi'));
+
+        // Validasi data
+        if (!empty($isi_motivasi)) {
+
+            // Update motivasi
+            if (!empty($isi_motivasi)) {
+                $Data = [
+                    'isi_motivasi'   => $isi_motivasi,
+                    'tanggal_update' => date("Y-m-d")
+                ];
+            }
+            $update = $this->motivasi->update($Data, $id);
+
+            // cek apakah data sudah di update
+            if ($update) {
+                // set response
+                $this->response([
+                    'status' => TRUE,
+                    'message' => 'Motivasi update successfully'
+                ], REST_Controller::HTTP_OK);
+            } else {
+                // Set response
+                $this->response([
+                    'status' => FALSE,
+                    'message' => 'Some problems occurred, please try again'
+                ], REST_Controller::HTTP_BAD_REQUEST);
+            }
+        } else {
+            // Set response
+            $this->response([
+                'status' => false,
+                'message' => 'provide an least one user info to update'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }
