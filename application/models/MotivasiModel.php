@@ -42,17 +42,17 @@ class motivasiModel extends CI_Model
         $update = $this->db->update($this->mTbl, $data, array('id' => $id));
 
         //return the status
-        return $update ? true : false;
+        return $this->db->affected_rows();
+        
     }
 
-    /*
-     * Delete materi data
-     */
+    // delete data motivasi
     public function delete($id)
     {
-        //update mater from materi table
-        $delete = $this->db->delete('materi', array('id' => $id));
-        //return the status
-        return $delete ? true : false;
+        //query ke database
+        $delete = $this->db->delete($this->mTbl, array('id' => $id));
+        
+        // return value
+        return $this->db->affected_rows();
     }
 }

@@ -139,4 +139,28 @@ class Motivasi extends REST_Controller
             ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
+
+    public function index_delete()
+    {
+        // ambil data yang dikirim oleh client
+        $idMotivasi = $this->delete('id_motivasi');
+
+        // menggunakan model
+        $result = $this->motivasi->delete($idMotivasi);
+
+        // cek apakah dat sudah terdelete
+        if ($result) {
+            // response
+            $this->response([
+                'status'  => TRUE,
+                'message' => 'motivasi was delete',
+            ], REST_Controller::HTTP_OK);
+        } else {
+            // response
+            $this->response([
+                'status'  => FALSE,
+                'message' => 'id Motivasi not found',
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+    }
 }
