@@ -25,21 +25,11 @@ class Motivasi extends REST_Controller
         }
     }
 
-    function index_get()
+    public function index_get()
     {
+        // ambil data yang dikirim client
         $iduser = $this->get('iduser');
         $tanggal_input = $this->get('tanggal_input');
-
-        // test apakah ada id yang dikirim
-        // if (!$iduser) {
-        //     $api = $this->motivasi->getMotivasi();
-        // } else {
-        //     if ($this->motivasi->getMotivasi($iduser)) {
-        //         $api = $this->motivasi->getMotivasi($iduser);
-        //     } else {
-                
-        //     }
-        // }
 
         // cek apakah ada id user
         if ($iduser) {
@@ -67,5 +57,46 @@ class Motivasi extends REST_Controller
                 'data' => $api
             ], REST_Controller::HTTP_OK);
         }
-    }
+    } 
+
+    public function index_post()
+    {
+        // ambil data yang dikirim client dan masukan kedalam array
+        $motivasi = $this->input->post("isi_motivasi");
+        $idUser = $this->input->post("iduser");
+        $tanggal_input = date("Y-m-d");
+
+        // cek id user
+        // load model
+        $this->load->model('userModel');
+        // ambil data user menggunakan iduser yang dikirim client
+        $user = $this->userModel->getUser($idUser);
+        
+        // cek apakah id user telah terdaftar
+        if (!$user) {
+            // response
+            $this->response([
+                'status' => false,
+                'message' => 'user with Id not registered'
+            ], REST_Controller::HTTP_NOT_FOUND);
+        } else {
+            // siapkan data untuk di input
+            $dataInsert = array(
+                'isi_motivasi' => $motivasi,
+                'iduser' => $idUser,
+                'tanggal_input' => $tanggal_input,
+                'tanggal_update' => $tanggal_input
+            );
+
+            // masukan data menggunakan model
+            $insert = $this->motivasi->insert($dataInsert);
+
+            // response
+            $this->response([
+                'status' => TRUE,
+                'message' => 'Motivasi added successfully.',
+            ], REST_Controller::HTTP_CREATED);
+        }
+
+    } 
 }

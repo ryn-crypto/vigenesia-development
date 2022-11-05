@@ -25,7 +25,7 @@ class User extends REST_Controller
         }
     }
 
-    //Menampilkan data user
+    // Menampilkan data user
     function index_get()
     {
         $id = $this->get('iduser');

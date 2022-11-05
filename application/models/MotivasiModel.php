@@ -9,7 +9,6 @@ class motivasiModel extends CI_Model
         parent::__construct();
 
         $this->mTbl = 'motivasi';
-        $this->muser='user';
     }
 
 
@@ -24,23 +23,14 @@ class motivasiModel extends CI_Model
             return $this->db->get('motivasi')->result();
         }
     }
-    /*
-     * Insert motivasi data
-     */
     
+    // insert ke tabel motivasi 
     public function insert($data)
     {
-        //add created and modified date if not exists
-        if (!array_key_exists("tanggal_input", $data)) {
-            $data['tanggal_input'] = date("Y-m-d H:i:s");
-        }
-
-
-
-        //insert motivasi data to motiasi table
+        //insert motivasi ke database
         $insert = $this->db->insert($this->mTbl, $data);
 
-        //return the status
+        // return value
         return $insert ? $this->db->insert_id() : false;
     }
 
