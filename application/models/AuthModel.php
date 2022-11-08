@@ -8,82 +8,41 @@ class AuthModel extends CI_Model
     {
         parent::__construct();
 
-        // Load the database library
-        $this->load->database();
-
+        // nama tabel dalam database
         $this->userTbl = 'user';
     }
 
-    /*
-     * Get rows from the users table
-     */
-    function getRows($params = array())
+    // get email untuk mengambil email
+    function getEmail($param)
     {
-        $this->db->select('*');
         $this->db->from($this->userTbl);
-
-        //fetch data by conditions
-        if (array_key_exists("conditions", $params)) {
-            foreach ($params['conditions'] as $key => $value) {
-                $this->db->where($key, $value);
-            }
-        }
-
-        if (array_key_exists("iduser", $params)) {
-            $this->db->where('iduser', $params['iduser']);
-            $query = $this->db->get();
-            $result = $query->row_array();
-        } else {
-            //set start and limit
-            if (array_key_exists("start", $params) && array_key_exists("limit", $params)) {
-                $this->db->limit($params['limit'], $params['start']);
-            } elseif (!array_key_exists("start", $params) && array_key_exists("limit", $params)) {
-                $this->db->limit($params['limit']);
-            }
-
-            if (array_key_exists("returnType", $params) && $params['returnType'] == 'count') {
-                $result = $this->db->count_all_results();
-            } elseif (array_key_exists("returnType", $params) && $params['returnType'] == 'single') {
-                $query = $this->db->get();
-                $result = ($query->num_rows() > 0) ? $query->row_array() : false;
-            } else {
-                $query = $this->db->get();
-                $result = ($query->num_rows() > 0) ? $query->result_array() : false;
-            }
-        }
-
-        //return fetched data
-        return $result;
+        $this->db->where('email', $param);
+        return $this->db->count_all_results();
     }
-    /*
-     * Insert user data
-     */
+
+    // insert data
     public function insert($data)
     {
-        //add created and modified date if not exists
+        // tambahkan tanggal input
         if (!array_key_exists("tanggal_input", $data)) {
             $data['tanggal_input'] = date("Y-m-d H:i:s");
         }
+        // tambahkan role_id
         if (!array_key_exists("role_id", $data)) {
             $data['role_id'] = 2;
         }
-
+        // tambahkan is_active
         if (!array_key_exists("is_active", $data)) {
             $data['is_active'] = 1;
         }
 
-
-        //insert user data to users table
-        $insert = $this->db->insert($this->userTbl, $data);
-
-        //return the status
-        return $insert ? $this->db->insert_id() : false;
+        // insert ke database
+        $insert = $this->db->insert($this->userTbl, $data);        
+        return $this->db->affected_rows();
     }
 
 
-    /*
-     * Update user data
-     */
+    // update data
     public function update($data, $id)
     {
         //add modified date if not exists
@@ -98,9 +57,7 @@ class AuthModel extends CI_Model
         return $update ? true : false;
     }
 
-    /*
-     * Delete user data
-     */
+    // delete data 
     public function delete($id)
     {
         //update user from users table

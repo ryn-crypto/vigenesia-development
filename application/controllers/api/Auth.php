@@ -7,7 +7,7 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class registrasi extends REST_Controller
+class Auth extends REST_Controller
 {
     public function __construct()
     {
@@ -24,61 +24,59 @@ class registrasi extends REST_Controller
     }
     
     // register function
-    public function index_post()
+    public function register_post()
     {
         // ambil data yang sikirim dari user
-        $namaku = htmlspecialchars($this->input->post('nama', true));
         $nama = strip_tags($this->post('nama'));
-
-        var_dump($namaku);
-        var_dump($nama);
-        die;
-
         $profesi = strip_tags($this->post('profesi'));
         $email = strip_tags($this->post('email'));
         $password = $this->post('password');
 
-        // Validate the post data
+        // Validasi data yang dikirimkan
         if (!empty($nama)  && !empty($profesi) && !empty($email) && !empty($password)) {
 
-            // Check if the given email already exists
-            $con['returnType'] = 'count';
-            $con['conditions'] = array(
-                'email' => $email,
-            );
-
-            $userCount = $this->auth->getRows($con);
+            // Cek apakah email sudah terdaftar
+            $userCount = $this->auth->getEmail($email);
             
+            // hasil dari pengecekan email
             if ($userCount > 0) {
-                // Set the response and exit
-                $this->response("The given email already exists.", REST_Controller::HTTP_BAD_REQUEST);
+                // Set response
+                $this->response([
+                    'status' => false,
+                    'message' => 'The given email already exists'
+                ], REST_Controller::HTTP_BAD_REQUEST);
             } else {
-                // Insert user data
+                // jika email tidak ada insert user data
                 $userData = array(
                     'nama' => $nama,
                     'profesi' => $profesi,
                     'email' => $email,
-                    'password' => md5($password),
-
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
                 );
                 $insert = $this->auth->insert($userData);
 
-                // Check if the user data is inserted
+                // Check iapakah user sudah terinput di database
                 if ($insert) {
                     // Set the response and exit
                     $this->response([
-                        'is_active' => TRUE,
-                        'message' => 'The user has been added successfully.',
-                        'data' => $insert
-                    ], REST_Controller::HTTP_OK);
+                        'status' => TRUE,
+                        'message' => 'The user has been added successfully.'
+                    ], REST_Controller::HTTP_CREATED);
                 } else {
-                    // Set the response and exit
-                    $this->response("Some problems occurred, please try again.", REST_Controller::HTTP_BAD_REQUEST);
+                    // Set response
+                    $this->response([
+                        'status' => false,
+                        'message' => 'Some problems occurred, please try again'
+                    ], REST_Controller::HTTP_BAD_REQUEST);
                 }
             }
+        // jika info yang di berikan tidak lengakap
         } else {
-            // Set the response and exit
-            $this->response("Provide complete user info to add.", REST_Controller::HTTP_BAD_REQUEST);
+            // Set response
+            $this->response([
+                'status' => false,
+                'message' => 'Provide complete user info to add'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
 
