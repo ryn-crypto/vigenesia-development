@@ -36,7 +36,13 @@ class Auth extends REST_Controller
         if (!empty($nama)  && !empty($profesi) && !empty($email) && !empty($password)) {
 
             // Cek apakah email sudah terdaftar
-            $userCount = $this->auth->getEmail($email);
+            // Check if the given email already exists
+            $con['returnType'] = 'count';
+            $con['conditions'] = array(
+                'email' => $email,
+            );
+
+            $userCount = $this->auth->getRows($con);
             
             // hasil dari pengecekan email
             if ($userCount > 0) {
@@ -67,7 +73,7 @@ class Auth extends REST_Controller
                     $this->response([
                         'status' => false,
                         'message' => 'Some problems occurred, please try again'
-                    ], REST_Controller::HTTP_BAD_REQUEST);
+                    ], REST_Controller::HTTP_NOT_MODIFIED);
                 }
             }
         // jika info yang di berikan tidak lengakap
@@ -81,39 +87,55 @@ class Auth extends REST_Controller
     }
 
     // login function
-    public function login()
-        {
-            // Get the post data
-            $email = $this->post('email');
-            $password = $this->post('password');
+    public function login_post()
+    {
+        // ambil data yang dikirim user
+        $email = $this->post('email');
+        $password = $this->post('password');
 
-            // Validate the post data
-            if (!empty($email) && !empty($password)) {
+        // validasi data yang dikirim
+        if (!empty($email) && !empty($password)) {
+            // cek apakah ada user yang sesuai dengan email
+            $con['returnType'] = 'single';
+            $con['conditions'] = array(
+                'email' => $email,
+                'is_active' => 1
+            );
 
-                // Check if any user exists with the given credentials
-                $con['returnType'] = 'single';
-                $con['conditions'] = array(
-                    'email' => $email,
-                    'password' => md5($password),
-                    'is_active' => 1
-                );
-                $user = $this->user->getRows($con);
-
-                if ($user) {
-                    // Set the response and exit
-                    $this->response([
-                        'is_active' => TRUE,
-                        'message' => 'User login berhasil bro.',
-                        'data' => $user
-                    ], REST_Controller::HTTP_OK);
-                } else {
-                    // Set the response and exit
-                    //BAD_REQUEST (400) being the HTTP response code
-                    $this->response("Ada kesalahan di email / password.", REST_Controller::HTTP_BAD_REQUEST);
-                }
+            $user = $this->auth->getRows($con);
+            if (!$user) {
+                // jika email tidak terdaftar
+                // Set response
+                $this->response([
+                    'status' => false,
+                    'message' => 'an error occurred in the email'
+                ], REST_Controller::HTTP_NOT_FOUND);
             } else {
-                // Set the response and exit
-                $this->response("Belum mengisi email dan password.", REST_Controller::HTTP_BAD_REQUEST);
+                // jika email tersedia
+                // cek apakah password sudah sesuai
+                if (!password_verify($password, $user['password'])) {
+                    // jika password tidak sesuai
+                    // Set response
+                    $this->response([
+                        'status' => false,
+                        'message' => 'password does not match'
+                    ], REST_Controller::HTTP_CONFLICT);
+                } else {
+                    // jika password sudah sesuai
+                    $this->response([
+                        'status' => TRUE,
+                        'message' => 'login success',
+                        'data' => $user
+                    ], REST_Controller::HTTP_ACCEPTED);
+                }
             }
+        } else {
+            // jika tidak ada data yang dikirim
+            // Set response
+            $this->response([
+                'status' => false,
+                'message' => 'Provide complete email and password'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         }
+    }
 }

@@ -12,12 +12,34 @@ class AuthModel extends CI_Model
         $this->userTbl = 'user';
     }
 
-    // get email untuk mengambil email
-    function getEmail($param)
+    // untuk mengambil data berdasarkan kondisi
+    function getRows($params = array())
     {
+        // set data tabel database yang akan di query
+        $this->db->select('*');
         $this->db->from($this->userTbl);
-        $this->db->where('email', $param);
-        return $this->db->count_all_results();
+
+        // pilah data berdasarkan kondisi yang dikirim
+        if (array_key_exists("conditions", $params)) {
+            foreach ($params['conditions'] as $key => $value) {
+                // gunakan where dengan parameter yang dikirim
+                $this->db->where($key, $value);
+            }
+        }
+
+        // get data berdasarkan return type yang dikirim dalam parameter
+        if (array_key_exists("returnType", $params) && $params['returnType'] == 'count') {
+            $result = $this->db->count_all_results();
+        } elseif (array_key_exists("returnType", $params) && $params['returnType'] == 'single') {
+            $query = $this->db->get();
+            $result = ($query->num_rows() > 0) ? $query->row_array() : false;
+        } else {
+            $query = $this->db->get();
+            $result = ($query->num_rows() > 0) ? $query->result_array() : false;
+        }
+
+        //return data
+        return $result;
     }
 
     // insert data
