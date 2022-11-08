@@ -48,9 +48,7 @@ class UserModel extends CI_Model
     }
 
 
-    /*
-     * Update user data
-     */
+    // update data user 
     public function update($data, $id)
     {
         //add modified date if not exists
@@ -65,9 +63,7 @@ class UserModel extends CI_Model
         return $update ? true : false;
     }
 
-    /*
-     * Delete user data
-     */
+    // hapus data user
     public function delete($id)
     {
         //update user from users table

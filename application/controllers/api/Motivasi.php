@@ -102,7 +102,7 @@ class Motivasi extends REST_Controller
     public function index_put()
     {
         // ambil data 
-        $id = $this->put('id');
+        $id = $this->put('id_motivasi');
         $isi_motivasi = strip_tags($this->put('isi_motivasi'));
 
         // Validasi data
@@ -140,6 +140,7 @@ class Motivasi extends REST_Controller
         }
     }
 
+    // delete motivasi
     public function index_delete()
     {
         // ambil data yang dikirim oleh client

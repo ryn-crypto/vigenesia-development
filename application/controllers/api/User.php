@@ -50,6 +50,69 @@ class User extends REST_Controller
         }
     }
 
+    function index_put()
+    {
+
+        // Ambil data yang dikirimkan dari user
+        $id = $this->put('iduser');
+        $nama = strip_tags($this->put('nama'));
+        $profesi = strip_tags($this->put('profesi'));
+        $email = strip_tags($this->put('email'));
+        $password = $this->put('password');
+
+
+        // Validate the post data
+        if (!empty($nama)  || !empty($profesi) || !empty($email) || !empty($password)) {
+            
+            // Update user data pada array
+            $userData = array();
+
+            // jika ada perubahan nama
+            if (!empty($nama)) {
+                $userData['nama'] = $nama;
+            }
+            // jika ada perubahan profesi
+            if (!empty($profesi)) {
+                $userData['profesi'] = $profesi;
+            }
+            // jika ada perubahan email
+            if (!empty($email)) {
+                $userData['email'] = $email;
+            }
+            // jika ada perubahan password
+            if (!empty($password)) {
+                // enkripsi pasword
+                $userData['password'] = password_hash($password, PASSWORD_DEFAULT);
+                // decript pasword
+                // password_verify($password, $user['password'])
+            }
+
+            // masukan ke model user
+            $update = $this->user->update($userData, $id);
+
+            // Cek update data
+            if ($update) {
+                // Set response
+                $this->response([
+                    'status' => TRUE,
+                    'message' => 'update user profile success'
+                ], REST_Controller::HTTP_OK);
+            } else {
+                // Set response
+                $this->response([
+                    'status' => false,
+                    'message' => 'Some problems occurred, please try again.'
+                ], REST_Controller::HTTP_BAD_REQUEST);
+            }
+        } else {
+            // Set response
+            $this->response([
+                'status' => false,
+                'message' => 'Provide at least one user info to update.'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
+
     function index_delete()
     {
         // ambil iduser yang dikirimkan
