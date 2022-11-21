@@ -34,14 +34,16 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">Vigenesia</a></h1>
+      <h1 class="logo"><a href="index.html">ViGeNesia</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="<?= base_url()?>/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#powered">Sponsor</a></li>
+          <li><a class="nav-link scrollto" href="#features">Feature</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Try API</a></li>
@@ -72,37 +74,28 @@
       <div class="container">
 
         <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-right">
+          <div class="content col-xl-8 d-flex align-items-stretch" data-aos="fade-right">
             <div class="content">
-              <h3>Voluptatem dignissimos provident quasi</h3>
+              <h3>ViGeNesia yaitu</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              Hasil pemikiran dari diskusi dengan mahasiswa Universitas Bina Sarana Informatika untuk membangun startup, satu ide produknya adalah ViGeNesia (Visi Generasi Indonesia). Mimpi besar ViGeNesia adalah aplikasi ini bisa menyatukan generasi muda Indonesia dari sabang sampai merauke dalam merajut nasionalisme, persahabatan, saling memotivasi, mengedukasi, berbagi cerita dan cita-cita. ViGeNesia akan dikembangkan secara bertahap mulai menjadi case study di mata kuliah Teknologi Web Service, dikembangkan oleh mahasiswa sebagai projek (projct base), dan dalam jangka panjang akan menjadi icon nasional melalui google playstore dan mendapatkan support dari Kemendikbud maupun masyarakat luas.
               </p>
-              <a href="#" class="about-btn">About us <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
-          <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
+          <div class="col-xl-3 d-flex align-items-stretch" data-aos="fade-left">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <h4>Pengembangan Kemampuan</h4>
+                  <p>Open Source guna mengambangkan kemampuan mahasiswa yang sedang mempelajari Web-Service</p>
                 </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              </div>
+              <div class="row">
+                <div class="col-md icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                  <h4>Orientasi Nasional</h4>
+                  <p>Bisa diakses semua orang sehingga bisa berbagi pengetahuan melalui tulisan yang disimpan dalam database ViGenesia</p>
                 </div>
               </div>
             </div><!-- End .content-->
@@ -115,33 +108,31 @@
     <!-- ======= Clients Section ======= -->
     <section id="powered" class="powered">
       <div class="container" data-aos="zoom-in">
+        
+        <div class="section-title">
+          <h2>Powered</h2>
+        </div>
 
-        <div class="row">
-
+        <div class="row d-flex justify-content-center">
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/clients/bsi.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/clients/bootstrap.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/clients/squadra.jpg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-4.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/clients/codeigniter.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-5.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/clients/sql.png" class="img-fluid" alt="">
           </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
         </div>
 
       </div>
@@ -152,8 +143,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Features</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Features Was Develop</h2>
+          <p>ViGeNesia memberikan fiture untuk berbagi motivasi dalam satu databse dan dapat diakses oleh semua orang, selain itu kita bisa melakukan registrasi akun dan melakukan login untuk bergbagi motivasi. Namun setelah mempelajari code yang diberikan kami menemukan beberapa kekurangan yang bisa kita kembangkan untuk penyusunan code dan menambahkan beberapa fitur yang ada pada web-service ViGeNesia.</p>
         </div>
 
         <div class="row content">
@@ -228,53 +219,6 @@
       </div>
     </section><!-- End Features Section -->
 
-    <!-- ======= Steps Section ======= -->
-    <section id="steps" class="steps">
-      <div class="container">
-
-        <div class="row no-gutters" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>01</span>
-            <h4>Lorem Ipsum</h4>
-            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>02</span>
-            <h4>Repellat Nihil</h4>
-            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>03</span>
-            <h4> Ad ad velit qui</h4>
-            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>04</span>
-            <h4>Repellendus molestiae</h4>
-            <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>05</span>
-            <h4>Sapiente Magnam</h4>
-            <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>06</span>
-            <h4>Facilis Impedit</h4>
-            <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Steps Section -->
-
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
@@ -328,7 +272,7 @@
 
         <div class="section-title">
           <h2>Founder Vigenesia</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Fauko misalam adalah founder dari vigenesia, beliau adalah mahasiswa UBSI</p>
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -338,7 +282,7 @@
               <img src="<?= base_url()?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
+                  <h4>Fauko Misalam</h4>
                   <span>Chief Executive Officer</span>
                 </div>
                 <div class="social">
@@ -361,17 +305,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/riyan.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Riyan First T</h4>
+                  <span>Back End Developer</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://github.com/ryn-crypto" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -379,17 +323,17 @@
           
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/ilham.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Ilham Alhapis</h4>
+                  <span>Database Administrator</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -397,17 +341,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Anggi Indra P</h4>
+                  <span>Front End Developer</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -415,17 +359,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/bimo.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
+                  <h4>Aryoso Bimo</h4>
+                  <span>UI/UX</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -436,14 +380,14 @@
               <img src="<?= base_url()?>/assets/img/team/team-4.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
+                  <h4>Sista Ruliani</h4>
+                  <span>Content Writer</span>
                 </div>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -485,7 +429,7 @@
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
+                  <h3>Any Question</h3>
                   <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
                 </div>
               </div>
@@ -527,76 +471,15 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Bikin</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Bikin</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>2022</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bikin-free-simple-landing-page-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Create with love <i class="bi bi-heart text-danger"></i> Squadra  
         </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
