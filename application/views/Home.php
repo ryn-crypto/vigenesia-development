@@ -28,15 +28,21 @@
   <link href="<?= base_url()?>/assets/css/style.css" rel="stylesheet">
   
 </head>
-
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">ViGeNesia</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="<?= base_url()?>/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="row">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <div class="col d-flex align-items-center justify-content-between">
+          <a href="<?= base_url();?>" class="logo"><img src="<?= base_url()?>/assets/img/apple-touch-icon.png" alt="" class="img-fluid"></a>
+          </div>
+        <div class="col d-flex align-items-center justify-content-between">
+          <!-- nama -->
+          <h1 class="logo"><a href="<?= base_url();?>">ViGeNesia</a></h1>
+        </div>
+      </div>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -46,7 +52,7 @@
           <li><a class="nav-link scrollto" href="#features">Feature</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Try API</a></li>
+          <li><a class="getstarted scrollto" href="<?= base_url();?>Dokumentasi">V.sq 0.1</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -105,7 +111,7 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Clients Section ======= -->
+    <!-- ======= Powered Section ======= -->
     <section id="powered" class="powered">
       <div class="container" data-aos="zoom-in">
         
@@ -115,28 +121,24 @@
 
         <div class="row d-flex justify-content-center">
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/bsi.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/powered/bsi.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/bootstrap.svg" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/powered/bootstrap.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/squadra.jpg" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/powered/codeigniter.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/codeigniter.svg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/clients/sql.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/powered/sql.png" class="img-fluid" alt="">
           </div>
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section><!-- End powered Section -->
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features" data-aos="fade-up">
@@ -224,40 +226,40 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Whats Develop</h2>
+          <p>Setalah mengimplemantasikan kedalam project, kami menyadari bahwa ada beberapa hal yang kurang dalam Web service yang disediakan. hal ini bukan berarti kami lebih mahir akan tetapi kekurangan tersebut hanya sebatas pengetahuan yang kami miliki, dan berikut beberapa hal yang kami kembangkan :</p>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <div class="icon"><i class="bx bx-link"></i></div>
+              <h4 class="title"><a href="">OOP</a></h4>
+              <p class="description">Melakukan perbaikan terhadap struktur code dengan menggunakan konsep MVC</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <div class="icon"><i class="bx bx-code"></i></div>
+              <h4 class="title"><a href="">Code</a></h4>
+              <p class="description">Melakukan perbaikan struktur kode agar lebih mudah untuk dibaca dan dikembangkan.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <div class="icon"><i class="bx bx-key"></i></div>
+              <h4 class="title"><a href="">API Key</a></h4>
+              <p class="description">Menambahkan API-Key untuk menambahkan keamanan web service</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <div class="icon"><i class="bx bx-book"></i></div>
+              <h4 class="title"><a href="">Dokumentasi</a></h4>
+              <p class="description">Dokumentasi API agar lebih mudah di pahami</p>
             </div>
           </div>
 
@@ -283,7 +285,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Fauko Misalam</h4>
-                  <span>Chief Executive Officer</span>
+                  <span>Founder ViGeNesia</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -298,11 +300,15 @@
 
         <div class="section-title mt-5">
           <h2>Team Develop program</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <div class="row d-flex justify-content-center mb-5">
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="<?= base_url()?>/assets/img/powered/squadra.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <p>Team solid mahasiswa universitas Bina Sarana Informatika, yang saat pengembangan aplikasi ini berada di smester 5. Kami berharap project ini bisa berkembang lebih besar kedepannya. </p>
         </div>
 
         <div class="row d-flex justify-content-center">
-
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <img src="<?= base_url()?>/assets/img/team/riyan.jpg" class="img-fluid" alt="">
@@ -345,7 +351,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Anggi Indra P</h4>
-                  <span>Front End Developer</span>
+                  <span>Mobile Developer</span>
                 </div>
                 <div class="social">
                   <a href="" target="_blank"><i class="bi bi-github"></i></a>
@@ -404,7 +410,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Gunakan contact yang tertera untuk mengirimkan pertanyaan</p>
         </div>
 
         <div class="row">
@@ -465,9 +471,10 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
+    </section>
+    <!-- End Contact Section -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -483,7 +490,6 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

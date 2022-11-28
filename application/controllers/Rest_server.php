@@ -4,16 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Rest_server extends CI_Controller {
 
-    // public function index()
-    // {
-    //     $this->load->helper('url');
-
-    //     $this->load->view('rest_server');
-    // }
-
-
     public function index()
     {
         $this->load->view('Home');
+    }
+
+    public function dokumentasi()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('dokumentasi');
+        $this->load->view('templates/footer');
     }
 }
