@@ -67,6 +67,14 @@
             <span class="nav-link-text ms-1">User</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('/Dokumentasi/key')?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">key</i>
+            </div>
+            <span class="nav-link-text ms-1">V-Key</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -82,8 +90,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/api/Auth')?></h6>
+        <nav aria-label="breadcrumb" class="d-flex align-items-baseline">
+          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/Auth')?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -312,6 +320,13 @@
         damping: '0.5'
       }
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <script>
+    function copyText() {  
+      var copyText = document.getElementById("text-copy");  
+        copyText.select();  
+        document.execCommand("copy");
     }
   </script>
   <!-- Github buttons -->
