@@ -8,4 +8,9 @@ class Dokumentasi extends CI_Controller {
     {
         $this->load->view('dokumentasi/home');
     }
+    
+    public function auth()
+    {
+        $this->load->view('dokumentasi/authorize');
+    }
 }
