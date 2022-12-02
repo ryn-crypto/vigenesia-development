@@ -36,7 +36,7 @@
     <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('/Dokumentasi')?>">
+          <a class="nav-link text-white " href="<?= base_url('/Dokumentasi')?>">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -60,7 +60,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="<?= base_url('/Dokumentasi/user')?>">
+          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('/Dokumentasi/user')?>">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">manage_accounts</i>
             </div>
@@ -90,8 +90,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <h6 class="font-weight-bolder mb-0">Dokumentasi Perubahan</h6>
+        <nav aria-label="breadcrumb" class="d-flex align-items-baseline d-none d-lg-block">
+          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/User')?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -125,122 +125,145 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">dataset</i>
+                <i class="material-icons opacity-10">manage_accounts</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Dokuementasi Perubahan</p>
+                <p class="text-sm mb-0 text-capitalize">Dokuementasi Penggunaan</p>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-body">
-              <h6 class="mb-2 "> Perubahan pada database</h6>
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sebelum</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_before.jpg" alt="">
-                  <p class="mt-2 text-sm">Dalam database sebelumnya tidak ada tabel untuk menyimpan API-KEY.</p>
-                </div>
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sesudah</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_after.png" alt="">
-                  <p class="mt-2 text-sm">Kami menambahkan tabel untuk menyimpan API-KEY.</p>
+              <!-- get all data -->
+              <div class="row border border-2">
+                <h6 class="mb-3 mt-2">Get all data user</h6>
+                <div class="container col-md-10">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('/User')?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Method</th>
+                        <td>GET</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Header</th>
+                        <td>Content-Type: application/json</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Response</th>
+                        <td>
+                          <img src="<?= base_url();?>/assets/img/dokumentasi/response_user.jpg" alt="" class="img-thumbnail rounded" width='400'>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              <!-- get all end -->
+              <!-- get data by id -->
+              <div class="row border border-2 mt-2">
+                <h6 class="mb-3 mt-2">Get data user by id</h6>
+                <div class="container col-md-10">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('/User')?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Method</th>
+                        <td>GET</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Header</th>
+                        <td>Content-Type: application/json</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Body</th>
+                        <td>iduser = "int"</td>
+                      </tr>
+                      <tr>
+                      <th scope="row">Response</th>
+                        <td>
+                          <img src="<?= base_url();?>/assets/img/dokumentasi/response_user.jpg" alt="" class="img-thumbnail rounded" width='400'>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- get end -->
+              <!-- put -->
+              <div class="row border border-2 mt-2">
+                <h6 class="mb-3 mt-2">Put data user</h6>
+                <div class="container col-md-10">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('/User')?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Method</th>
+                        <td>PUT</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Header</th>
+                        <td>Content-Type: application/json</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Body</th>
+                        <td>iduser = 'int' <br> 
+                            nama = 'string' <br>
+                            profesi = 'string' <br>
+                            email = 'string' <br>
+                            password = 'anytype' <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Response</th>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_user_put.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- put end -->
+              <!-- delete -->
+              <div class="row border border-2 mt-2">
+                <h6 class="mb-3 mt-2">Put data user</h6>
+                <div class="container col-md-10">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Endpoint</th>
+                        <td>/Auth</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Method</th>
+                        <td>PUT</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Header</th>
+                        <td>Content-Type: application/json</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Body</th>
+                        <td>Post tidak perlu/ gunakan param</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Response</th>
+                        <td>Larry the Bird</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- put end -->
             </div>
           </div>
-          <!-- card database end -->
-          <!-- card code -->
-          <div class="card mt-md-5 mt-4">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">code</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Dokuementasi Perubahan</p>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-body">
-              <h6 class="mb-2 "> Perubahan pada Struktur code</h6>
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sebelum</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_before.jpg" alt="">
-                  <p class="mt-2 text-sm">Struktur code tercampur antara controller dan model</p>
-                </div>
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sesudah</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_after.png" alt="">
-                  <p class="mt-2 text-sm">Kami memperbaiki menjadi lebih modular</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- card code end -->
-          <!-- card modulasi -->
-          <div class="card mt-md-5 mt-4">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">view_quilt</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Dokuementasi Perubahan</p>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-body">
-              <h6 class="mb-2 "> Perubahan pada Struktur modulasi</h6>
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sebelum</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_before.jpg" alt="">
-                  <p class="mt-2 text-sm">Struktur modul masih acak</p>
-                </div>
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sesudah</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_after.png" alt="">
-                  <p class="mt-2 text-sm">Kami membuat 1 url untuk banyak request</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- card modulasi end -->
-          <!-- card dokumentasi -->
-          <div class="card mt-md-5 mt-4">
-            <div class="card-header p-3 pt-2">
-              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">description</i>
-              </div>
-              <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Dokuementasi Perubahan</p>
-              </div>
-            </div>
-            <hr class="dark horizontal my-0">
-            <div class="card-body">
-              <h6 class="mb-2 ">Memperbaiki Dokumentasi</h6>
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sebelum</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_before.jpg" alt="">
-                  <p class="mt-2 text-sm">Hanya berisi url tanpa keterangan</p>
-                </div>
-                <div class="col-md-6 text-center">
-                  <h7 class="mb-5">Sesudah</h7>
-                  <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_after.png" alt="">
-                  <p class="mt-2 text-sm">Membuat dokumentasi pada masing masing url, dengan cara penggunaannya</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- card dokumentasi end -->
         </div>
       </div>
       <footer class="footer py-4  ">

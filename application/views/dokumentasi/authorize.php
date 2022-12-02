@@ -33,7 +33,7 @@
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link text-white " href="<?= base_url('/Dokumentasi')?>">
@@ -90,7 +90,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb" class="d-flex align-items-baseline">
+        <nav aria-label="breadcrumb" class="d-flex align-items-baseline d-none d-lg-block">
           <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/Auth')?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -135,7 +135,7 @@
             <div class="card-body">
               <!-- get -->
               <div class="row border border-2">
-                <h6 class="mb-3 mt-2">Get data user</h6>
+                <h6 class="mb-3 mt-2">Login user</h6>
                 <div class="container col-md-10">
                   <table class="table table-hover table-bordered">
                     <tbody>
@@ -320,13 +320,6 @@
         damping: '0.5'
       }
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <script>
-    function copyText() {  
-      var copyText = document.getElementById("text-copy");  
-        copyText.select();  
-        document.execCommand("copy");
     }
   </script>
   <!-- Github buttons -->

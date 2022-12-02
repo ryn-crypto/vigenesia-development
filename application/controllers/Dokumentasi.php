@@ -13,4 +13,14 @@ class Dokumentasi extends CI_Controller {
     {
         $this->load->view('dokumentasi/authorize');
     }
+    
+    public function motivasi()
+    {
+        $this->load->view('dokumentasi/motivasi');
+    }
+    
+    public function user()
+    {
+        $this->load->view('dokumentasi/user');
+    }
 }
