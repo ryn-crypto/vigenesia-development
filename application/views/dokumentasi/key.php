@@ -60,7 +60,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('/Dokumentasi/user')?>">
+          <a class="nav-link text-white " href="<?= base_url('/Dokumentasi/user')?>">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">manage_accounts</i>
             </div>
@@ -68,7 +68,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="<?= base_url('/Dokumentasi/key')?>">
+          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('/Dokumentasi/key')?>">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">key</i>
             </div>
@@ -91,7 +91,7 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb" class="d-flex align-items-baseline d-none d-lg-block">
-          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/User')?></h6>
+          <h6 class="font-weight-bolder mb-0">Api Key</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -125,10 +125,10 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">manage_accounts</i>
+                <i class="material-icons opacity-10">key</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Dokuementasi Penggunaan</p>
+                <p class="text-sm mb-0">*kode akses untuk api</p>
               </div>
             </div>
             <hr class="dark horizontal my-0">
@@ -162,106 +162,6 @@
                 </div>
               </div>
               <!-- get all end -->
-              <!-- get data by id -->
-              <div class="row border border-2 mt-2">
-                <h6 class="mb-3 mt-2">Get data user by id</h6>
-                <div class="container col-md-10">
-                  <table class="table table-hover table-bordered">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Url</th>
-                        <td><?= base_url('/User')?></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Method</th>
-                        <td>GET</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Header</th>
-                        <td>Content-Type: application/json</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Body</th>
-                        <td>iduser = "int"</td>
-                      </tr>
-                      <tr>
-                      <th scope="row">Response</th>
-                        <td>
-                          <img src="<?= base_url();?>/assets/img/dokumentasi/response_user.jpg" alt="" class="img-thumbnail rounded" width='400'>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- get end -->
-              <!-- put -->
-              <div class="row border border-2 mt-2">
-                <h6 class="mb-3 mt-2">Put data user</h6>
-                <div class="container col-md-10">
-                  <table class="table table-hover table-bordered">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Url</th>
-                        <td><?= base_url('/User')?></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Method</th>
-                        <td>PUT</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Header</th>
-                        <td>Content-Type: application/json</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Body</th>
-                        <td>iduser = 'int' <br> 
-                            nama = 'string' <br>
-                            profesi = 'string' <br>
-                            email = 'string' <br>
-                            password = 'anytype' <br>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Response</th>
-                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_user_put.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- put end -->
-              <!-- delete -->
-              <div class="row border border-2 mt-2">
-                <h6 class="mb-3 mt-2">Delete data user</h6>
-                <div class="container col-md-10">
-                  <table class="table table-hover table-bordered">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Url</th>
-                        <td><?= base_url('/User')?></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Method</th>
-                        <td>DELETE</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Header</th>
-                        <td>Content-Type: application/json</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Body</th>
-                        <td>iduser = "int"</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Response</th>
-                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_user_delete.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- put end -->
             </div>
           </div>
         </div>

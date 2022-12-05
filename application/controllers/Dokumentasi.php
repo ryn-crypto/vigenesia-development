@@ -23,4 +23,9 @@ class Dokumentasi extends CI_Controller {
     {
         $this->load->view('dokumentasi/user');
     }
+    
+    public function key()
+    {
+        $this->load->view('dokumentasi/key');
+    }
 }
