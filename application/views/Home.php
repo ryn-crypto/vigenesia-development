@@ -66,7 +66,14 @@
     <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
       <h1>VIGENESIA</h1>
       <h2>Visi Generasi Indonesia</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      <div class="row">
+        <div class="col-6">
+          <a href="http://vigenesia.org/" class="btn-get-started">Original</a>
+        </div>
+        <div class="col-6">
+          <a href="<?= base_url();?>Dokumentasi" class="btn-get-started">Sq01 V</a>
+        </div>
+      </div>
       <img src="<?= base_url()?>/assets/img/hero-img.png" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
     </div>
 
