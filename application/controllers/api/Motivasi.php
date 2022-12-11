@@ -29,8 +29,7 @@ class Motivasi extends REST_Controller
     {
         // ambil data yang dikirim client
         $iduser = $this->get('iduser');
-        $tanggal_input = $this->get('tanggal_input');
-
+        
         // cek apakah ada id user
         if ($iduser) {
             if (!$this->motivasi->getMotivasi($iduser)) {

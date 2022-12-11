@@ -91,7 +91,7 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb" class="d-flex align-items-baseline d-none d-lg-block">
-          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/Motivasi')?></h6>
+          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('api/Motivasi')?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -140,8 +140,8 @@
                   <table class="table table-hover table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Motivasi')?></td>
                       </tr>
                       <tr>
                         <th scope="row">Method</th>
@@ -153,11 +153,11 @@
                       </tr>
                       <tr>
                         <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
+                        <td>iduser = 'int'</td>
                       </tr>
                       <tr>
                         <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_motivasi_get.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
                       </tr>
                     </tbody>
                   </table>
@@ -171,8 +171,8 @@
                   <table class="table table-hover table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Motivasi')?></td>
                       </tr>
                       <tr>
                         <th scope="row">Method</th>
@@ -184,11 +184,13 @@
                       </tr>
                       <tr>
                         <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
+                        <td>iduser = 'int' <br> 
+                            isi_motivasi = 'string' <br>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_motivasi_post.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
                       </tr>
                     </tbody>
                   </table>
@@ -202,8 +204,8 @@
                   <table class="table table-hover table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Motivasi')?></td>
                       </tr>
                       <tr>
                         <th scope="row">Method</th>
@@ -215,17 +217,51 @@
                       </tr>
                       <tr>
                         <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
+                        <td>id_motivasi = 'int' <br> 
+                            isi_motivasi = 'string' <br>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_motivasi_put.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               <!-- put end -->
+              <!-- delete -->
+              <div class="row border border-2 mt-2">
+                <h6 class="mb-3 mt-2">Put data motivasi</h6>
+                <div class="container col-md-10">
+                  <table class="table table-hover table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Motivasi')?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Method</th>
+                        <td>DELETE</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Header</th>
+                        <td>Content-Type: application/json</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Body</th>
+                        <td>id_motivasi = 'int'
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Response</th>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_motivasi_delete.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- delete end -->
             </div>
           </div>
         </div>

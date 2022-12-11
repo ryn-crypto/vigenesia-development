@@ -228,13 +228,13 @@
                 <div class="col-md-6 text-center">
                   <h7 class="mb-5">Sebelum</h7>
                   <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_before.jpg" alt="">
+                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/dokumentasi_before.jpg" alt="">
                   <p class="mt-2 text-sm">Hanya berisi url tanpa keterangan</p>
                 </div>
                 <div class="col-md-6 text-center">
                   <h7 class="mb-5">Sesudah</h7>
                   <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/db_after.png" alt="">
+                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/dokumentasi_after.jpg" alt="">
                   <p class="mt-2 text-sm">Membuat dokumentasi pada masing masing url, dengan cara penggunaannya</p>
                 </div>
               </div>
