@@ -176,13 +176,13 @@
                 <div class="col-md-6 text-center">
                   <h7 class="mb-5">Sebelum</h7>
                   <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/sc_before.jpg" alt="">
+                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/code_before.jpg" alt="">
                   <p class="mt-2 text-sm">Struktur code tercampur antara controller dan model</p>
                 </div>
                 <div class="col-md-6 text-center">
                   <h7 class="mb-5">Sesudah</h7>
                   <br>
-                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/sc_after.jpg" alt="">
+                  <img class="img-thumbnail mt-1" src="<?= base_url()?>assets/img/dokumentasi/code_after.jpg" alt="">
                   <p class="mt-2 text-sm">Kami memperbaiki menjadi lebih modular</p>
                 </div>
               </div>

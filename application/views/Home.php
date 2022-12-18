@@ -158,7 +158,7 @@
 
         <div class="row content">
           <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
-            <img src="<?= base_url()?>/assets/img/features-1.png" class="img-fluid" alt="">
+            <img src="<?= base_url()?>/assets/img/hero.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
             <h3>Kemudahan untuk melakukan komunikasi cros platform</h3>

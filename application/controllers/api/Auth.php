@@ -36,7 +36,6 @@ class Auth extends REST_Controller
         if (!empty($nama)  && !empty($profesi) && !empty($email) && !empty($password)) {
 
             // Cek apakah email sudah terdaftar
-            // Check if the given email already exists
             $con['returnType'] = 'count';
             $con['conditions'] = array(
                 'email' => $email,

@@ -28,8 +28,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-        <img src="<?= base_url()?>assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">ViGeNesia</span>
+        <span class="ms-1 font-weight-bold text-2xl text-white">ViGeNesia</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -136,8 +135,8 @@
             <div class="card-body">
               <!-- register -->
               <div class="row border border-2">
-                <h6 class="mb-3 mt-2">Silahkan registrasi Untuk mendapat Api-Key</h6>
-                <div class="container col-md-10">
+                <h6 class="mb-3 mt-2 text-center mb-4">Silahkan registrasi Untuk mendapat Api-Key</h6>
+                <div class="container col-md-8">
                 <form action="<?= base_url('Dokumentasi/key') ?>" method="post">
                   <div class="input-group">
                     <input type="text" class="form-control border-bottom" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
@@ -159,8 +158,8 @@
                   <?= form_error('password', '<small class="text-danger pl-1">', '</small>') ?>
                   <!-- end form login -->
                   <div class="row d-md-flex justify-content-center mt-4">
-                    <div class="col-10">
-                      <button type="submit" class="btn btn-success">Get Key</button>
+                    <div class="col text-center">
+                      <button type="submit" class="btn bg-gradient-primary">Get Key</button>
                     </div>
                   </div>
                 </form>
