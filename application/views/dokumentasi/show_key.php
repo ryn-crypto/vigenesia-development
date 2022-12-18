@@ -134,39 +134,20 @@
             <hr class="dark horizontal my-0">
             <?= $this->session->flashdata('message'); ?>
             <div class="card-body">
-              <!-- register -->
+              <!-- api key -->
               <div class="row border border-2">
-                <h6 class="mb-3 mt-2">Silahkan registrasi Untuk mendapat Api-Key</h6>
                 <div class="container col-md-10">
-                <form action="<?= base_url('Dokumentasi/key') ?>" method="post">
-                  <div class="input-group">
-                    <input type="text" class="form-control border-bottom" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
-                    <div class="input-group-append">
-                      <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <?= form_error('email', '<small class="text-danger pl-1">', '</small>') ?>
-                  <div class="input-group mt-3">
-                    <input type="password" class="form-control border-bottom" id="password" name="password" placeholder="Password">
-                    <div class="input-group-append">
-                      <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <?= form_error('password', '<small class="text-danger pl-1">', '</small>') ?>
-                  <!-- end form login -->
-                  <div class="row d-md-flex justify-content-center mt-4">
-                    <div class="col-10">
-                      <button type="submit" class="btn btn-success">Get Key</button>
-                    </div>
-                  </div>
-                </form>
+                  <table class="table table-hover table-bordered mt-2">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Api Key : </th>
+                        <td><?= $key ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-              <!-- register end -->
+              <!-- api key end -->
             </div>
           </div>
         </div>

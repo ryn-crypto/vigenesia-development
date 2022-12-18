@@ -91,7 +91,7 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky" id="navbarBlur" data-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb" class="d-flex align-items-baseline d-none d-lg-block">
-          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('/Auth')?></h6>
+          <h6 class="font-weight-bolder mb-0">URL : <?= base_url('api/Auth')?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -140,24 +140,26 @@
                   <table class="table table-hover table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Auth/login')?></td>
                       </tr>
                       <tr>
                         <th scope="row">Method</th>
-                        <td>GET</td>
+                        <td>POST</td>
                       </tr>
                       <tr>
                         <th scope="row">Header</th>
                         <td>Content-Type: application/json</td>
                       </tr>
                       <tr>
-                        <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
+                      <th scope="row">Body</th>
+                        <td>email = 'string' <br> 
+                            password = 'string' <br>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_auth_login.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
                       </tr>
                     </tbody>
                   </table>
@@ -166,13 +168,13 @@
               <!-- get end -->
               <!-- post -->
               <div class="row border border-2 mt-2">
-                <h6 class="mb-3 mt-2">Post data user</h6>
+                <h6 class="mb-3 mt-2">Register user baru</h6>
                 <div class="container col-md-10">
                   <table class="table table-hover table-bordered">
                     <tbody>
                       <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
+                        <th scope="row">Url</th>
+                        <td><?= base_url('api/Auth/register')?></td>
                       </tr>
                       <tr>
                         <th scope="row">Method</th>
@@ -184,48 +186,21 @@
                       </tr>
                       <tr>
                         <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
+                        <td>nama = 'string' <br> 
+                            profesi = 'string' <br>
+                            email = 'string' <br> 
+                            password = 'string' <br>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
+                        <td><img src="<?= base_url();?>/assets/img/dokumentasi/response_auth_register.jpg" alt="" class="img-thumbnail rounded" width='400'></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               <!-- post end -->
-              <!-- put -->
-              <div class="row border border-2 mt-2">
-                <h6 class="mb-3 mt-2">Put data user</h6>
-                <div class="container col-md-10">
-                  <table class="table table-hover table-bordered">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Endpoint</th>
-                        <td>/Auth</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Method</th>
-                        <td>PUT</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Header</th>
-                        <td>Content-Type: application/json</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Body</th>
-                        <td>Post tidak perlu/ gunakan param</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Response</th>
-                        <td>Larry the Bird</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- put end -->
             </div>
           </div>
         </div>
