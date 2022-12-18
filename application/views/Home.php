@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?= base_url()?>/assets/img/favicon.png" rel="icon">
+  <link href="<?= base_url()?>/assets/img/apple-touch-icon.png" rel="icon">
   <link href="<?= base_url()?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -132,15 +132,15 @@
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?= base_url()?>/assets/img/powered/bootstrap.svg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
             <img src="<?= base_url()?>/assets/img/powered/codeigniter.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
             <img src="<?= base_url()?>/assets/img/powered/sql.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="<?= base_url()?>/assets/img/powered/bootstrap.svg" class="img-fluid" alt="">
           </div>
         </div>
 
@@ -161,67 +161,15 @@
             <img src="<?= base_url()?>/assets/img/features-1.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Kemudahan untuk melakukan komunikasi cros platform</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Dengan menggunakan rest-api yang terstruktut, akan mempermudah dalam melakukan pengembangan aplikasi secara cross paltform
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+              <li><i class="bi bi-check"></i> 1 database untuk banyak aplikasi</li>
+              <li><i class="bi bi-check"></i> Bisa digunakan untuk banayak platform</li>
+              <li><i class="bi bi-check"></i> Kemudahan akses</li>
             </ul>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-            <img src="<?= base_url()?>/assets/img/features-2.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-5" data-aos="fade-right">
-            <img src="<?= base_url()?>/assets/img/features-3.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5" data-aos="fade-left">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
-            <img src="<?= base_url()?>/assets/img/features-4.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
           </div>
         </div>
 
@@ -354,7 +302,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/anggi.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Anggi Indra P</h4>
@@ -390,7 +338,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
-              <img src="<?= base_url()?>/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url()?>/assets/img/team/sista.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sista Ruliani</h4>
